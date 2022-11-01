@@ -1,10 +1,50 @@
 body {
+  background: antiquewhite;
   margin: 0;
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  text-align: center;
 }
 
 a {
   color: #00B7FF;
 }
 
+.mainClass {
+  padding: 17px;
+  border-radius: 70px;
+  border: 2px solid #5b626826;
+  background-color: #be8dc70f;
+  font-family: system-ui;
+  margin: 3px;
+  animation-name: example;
+  animation-duration: 4s;
+}
+
+.text{
+  background-color: rgb(48, 48, 122);
+}
+
+button{
+  background: burlywood;
+  width: 125px;
+  border-radius: 22px;
+  color: currentColor;
+  font-size: 12px;
+  font-weight: bold;
+  transition: width 2s, background-color 3s
+
+}
+button:hover{
+  width: 135px;
+  color: white;
+  background-color: rgb(59, 81, 85);
+  
+}
+
+
+
+@keyframes example {
+  from {background-color: rgb(24, 31, 12);}
+  to {background-color: rgba(255, 0, 98, 0.24);}
+}

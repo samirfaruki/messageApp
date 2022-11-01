@@ -9,29 +9,31 @@
 </head>
 
 <body>
-  <h1>
-    <%= title %>
-  </h1>
-  <h2>Welcome to <%= title %>
-  </h2>
-  <hr>
-  <div>
-    <% messages.forEach((item)=>{%>
-      <h3>
-        <%=item.text %>
-      </h3>
-      <h3>
-        <%=item.user %>
-      </h3>
-      <h3>
-        <%=item.added %>
-      </h3>
-      <hr>
-      <%})%>
-  </div>
-  <!-- <button><a href="http://localhost:3000/new">add new Text</a></button> -->
+  <div class="mainClass">
+    <h1>
+      <%= title %>
+    </h1>
+    <h2>Welcome to <%= title %>
+    </h2>
+    <hr>
+    <div class="Text">
+      <% messages.forEach((item)=>{%>
+        <P>
+          <%=item.text %>
+        </P>
+        <h3>
+          <%=item.user %>
+        </h3>
+        <h5>
+          <%=item.added %>
+        </h5>
+        <hr>
+        <%})%>
+    </div>
+    <!-- <button><a href="http://localhost:3000/new">add new Text</a></button> -->
 
-  <button onclick="addNew(event)">Add new messages</button>
+    <button onclick="addNew(event)">Add new messages</button>
+  </div>
 
 </body>
 <script>
