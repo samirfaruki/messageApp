@@ -1,11 +1,43 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
+
+<head>
+  <title>
+    <%= title %>
+  </title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+  <h1>
+    <%= title %>
+  </h1>
+  <h2>Welcome to <%= title %>
+  </h2>
+  <hr>
+  <div>
+    <% messages.forEach((item)=>{%>
+      <h3>
+        <%=item.text %>
+      </h3>
+      <h3>
+        <%=item.user %>
+      </h3>
+      <h3>
+        <%=item.added %>
+      </h3>
+      <hr>
+      <%})%>
+  </div>
+  <!-- <button><a href="http://localhost:3000/new">add new Text</a></button> -->
+
+  <button onclick="addNew(event)">Add new messages</button>
+
+</body>
+<script>
+  const addNew = e => {
+    window.location.href = '/new'
+  }
+</script>
+
 </html>
